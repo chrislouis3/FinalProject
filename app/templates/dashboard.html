@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Student Grading System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>📚 Student Grading System</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Dashboard Penilaian</h2>
+
+        <!-- Statistics -->
+        <section class="stats" id="statsSection">
+            <div class="stat-card">
+                <h4>Total Siswa</h4>
+                <p id="totalStudents">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Rata-rata Kelas</h4>
+                <p id="averageGrade">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Nilai Tertinggi</h4>
+                <p id="highestGrade">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Nilai Terendah</h4>
+                <p id="lowestGrade">0</p>
+            </div>
+        </section>
+
+        <!-- Add Student Form -->
+        <section class="form-section">
+            <h3>Tambah Siswa Baru</h3>
+            <form id="addStudentForm" class="form">
+                <input type="text" id="studentName" placeholder="Nama Siswa" required>
+                <input type="text" id="studentNim" placeholder="NIM" required>
+                <input type="email" id="studentEmail" placeholder="Email" required>
+                <button type="submit" class="btn btn-primary">Tambah Siswa</button>
+            </form>
+            <div id="formMessage" class="message"></div>
+        </section>
+
+        <!-- Students List -->
+        <section class="students-section">
+            <h3>Daftar Siswa</h3>
+            <div id="studentsList" class="students-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Student Grading System. Final Project Software Testing.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

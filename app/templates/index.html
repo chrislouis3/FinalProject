@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>📚 Student Grading System</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Selamat Datang di Sistem Penilaian Siswa</h2>
+            <p>Kelola data siswa dan nilai dengan mudah dalam satu platform</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>👥 Kelola Siswa</h3>
+                <p>Tambah, edit, dan hapus data siswa dengan mudah</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Kelola Nilai</h3>
+                <p>Input nilai siswa untuk berbagai mata pelajaran</p>
+            </div>
+            <div class="feature-card">
+                <h3>📈 Statistik</h3>
+                <p>Lihat statistik kelas dan rata-rata nilai</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <a href="/dashboard" class="btn btn-primary">Buka Dashboard</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Student Grading System. Final Project Software Testing.</p>
+    </footer>
+</body>
+</html>
